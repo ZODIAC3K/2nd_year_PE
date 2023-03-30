@@ -108,7 +108,7 @@ if check_terms(["your name should be"]):
 if check_terms(['search for','google']) and ["youtube","search youtube for","search on youtube"] not in user_command:
     search_term = user_command.split("for")[-1]
     url = "http://www.google.com/search?" + search_term
-    webbrowser.ger().open(url)
+    webbrowser.get().open(url)
     engine.say("Searching"+ search_term + "on google")
     engine.runAndWait()
 
@@ -116,14 +116,14 @@ if check_terms(["search youtube for","search on youtube"]):
     if "search" and "on youtube" in user_command:
         search_term = user_command.split("search")[1][-2] # search[0] "XYZ" on[-2] youtube[-1]
         url = "http://www.youtube.com/results?search_query=" + search_term
-        webbrowser.ger().open(url)
+        webbrowser.get().open(url)
         engine.say("Searching"+ search_term + "on youtube")
         engine.runAndWait()
 
     if "search youtube for" in user_command:
         search_term = user_command.split("for")[-1]
         url = "http://www.youtube.com/results?search_query=" + search_term
-        webbrowser.ger().open(url)
+        webbrowser.get().open(url)
         engine.say("Searching"+ search_term + "on youtube")
         engine.runAndWait()
 
